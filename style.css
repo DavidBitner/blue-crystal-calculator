@@ -30,7 +30,6 @@ body {
   background-color: rgb(122, 122, 122);
   padding: 1.5rem;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
   gap: 1rem;
   min-width: 50vw;
@@ -40,11 +39,29 @@ body {
   text-align: center;
 }
 
+.results{
+  display: grid;
+  grid-template-columns: 1fr 1% 1fr;
+  gap: 2rem;
+  justify-content:space-between;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .results {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+}
+
 .box-row {
   display: grid;
-  grid-template-columns: max-content max-content max-content 1fr;
+  grid-template-columns: repeat(4, max-content);
   align-items: center;
   gap: 1rem;
+}
+
+.separator{
+  border-right: 1px solid black;
 }
 
 .value-input {
